@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 
-import { Header } from '@/widgets/header'
+import { MainLayout } from '@/shared/layouts/MainLayout'
 
 export const AuthPage = () => {
   const { type } = useParams<{ type: keyof typeof showAuth }>()
@@ -9,10 +9,5 @@ export const AuthPage = () => {
     login: () => <div>{type}</div>,
   }
 
-  return (
-    <div className='px-24'>
-      <Header />
-      {showAuth[type]()}
-    </div>
-  )
+  return <MainLayout>{showAuth[type]()}</MainLayout>
 }

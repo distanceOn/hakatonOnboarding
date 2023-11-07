@@ -1,1 +1,3 @@
-export const MainPage = () => <div className='bg-black'>dasdasd</div>
+import { MainLayout } from '@/shared/layouts/MainLayout'
+
+export const MainPage = () => <MainLayout>dsad</MainLayout>
