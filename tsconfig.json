@@ -17,13 +17,9 @@
     "incremental": true,
     "strictNullChecks": false,
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     },
-    "types": [
-      "vite-plugin-svgr/client",
-      "vite/client",
-      "@types/styled-components"
-    ],
+    "types": ["vite-plugin-svgr/client", "vite/client"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

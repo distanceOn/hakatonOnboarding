@@ -2,11 +2,13 @@ import { Route, Routes } from 'react-router-dom'
 
 import { ProtectedRoute } from './ProtectedRoute'
 
+import { AuthPage } from '@/pages/AuthPage'
 import { MainPage } from '@/pages/MainPage'
 
 export const AppRouter = () => (
   <Routes>
     <Route path='/' element={<MainPage />} />
+    <Route path='/auth/:type' element={<AuthPage />} />
 
     <Route element={<ProtectedRoute redirectPath='/login' />}>
       {/* <Route path='/profile' element={<ProfilePage />} /> */}
