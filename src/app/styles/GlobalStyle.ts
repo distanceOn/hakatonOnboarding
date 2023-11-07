@@ -2,9 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 
 import { getColor } from './Theme'
 
+import './index.css'
+
 import { Inter } from '@/shared/lib/Inter'
 
 export const GlobalStyle = createGlobalStyle`
+    
     @font-face {
         font-family: 'Inter';
         src: url(${Inter}) format('ttf'),

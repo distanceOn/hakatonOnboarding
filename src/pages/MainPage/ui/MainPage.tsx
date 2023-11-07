@@ -1,1 +1,1 @@
-export const MainPage = () => <div>dasdasd</div>
+export const MainPage = () => <div className='bg-black'>dasdasd</div>
