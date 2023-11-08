@@ -1,9 +1,12 @@
 import { useParams } from 'react-router-dom'
 
+import { useAppDispatch } from '@/shared/model/hooks'
+
 import { AuthFormInfo } from '@/entities/AuthFormInfo'
 import { AuthInput } from '@/features/AuthInput'
 import { AuthRemember } from '@/features/AuthRemember'
 import { Button } from '@/features/Button'
+import { setAuth } from '@/shared/model/userSlice'
 
 type InputType = {
   id: number
@@ -76,6 +79,12 @@ export const AuthForm = () => {
     register: 'Зарегистрироваться',
   }
 
+  const dispatch = useAppDispatch()
+
+  const handleClickButton = () => {
+    dispatch(setAuth(true))
+  }
+
   return (
     <div className=' w-2/5 px-16 flex flex-col gap-4'>
       <AuthFormInfo />
@@ -90,6 +99,7 @@ export const AuthForm = () => {
         ))}
         <AuthRemember />
         <Button
+          onClick={handleClickButton}
           value={btnValues[type]}
           link='/'
           bg='bg-blue-primary'

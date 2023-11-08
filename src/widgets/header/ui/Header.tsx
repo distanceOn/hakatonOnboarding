@@ -1,10 +1,16 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
+import { useAppDispatch, useAppSelector } from '@/shared/model/hooks'
 
 import { Button } from '@/features/Button'
 import { HeaderItem } from '@/features/HeaderItem/index'
+import { setAuth } from '@/shared/model/userSlice'
 import { Logo } from '@/shared/ui'
 
 export const Header = () => {
+  const { auth } = useAppSelector(state => state.user)
+
   const items = [
     {
       id: 1,
@@ -28,11 +34,54 @@ export const Header = () => {
     },
   ]
 
+  const authItems = [
+    {
+      id: 1,
+      value: 'Личный кабинет',
+      link: '#',
+    },
+    {
+      id: 2,
+      value: 'Материалы',
+      link: '#',
+    },
+    {
+      id: 3,
+      value: 'Прогресс',
+      link: '#',
+    },
+    {
+      id: 4,
+      value: 'Обратная связь',
+      link: '#',
+    },
+  ]
+
+  const [resultItems, setResultItems] = useState(items)
+
+  useEffect(() => {
+    console.log(auth)
+    if (auth) {
+      setResultItems(authItems)
+    } else {
+      setResultItems(items)
+    }
+  }, [auth])
+
+  const dispatch = useAppDispatch()
+
+  const handleDispatchBtn = () => {
+    if (auth) {
+      dispatch(setAuth(false))
+    }
+  }
+
   const btns = [
     {
       id: 1,
-      value: 'Войти',
+      value: auth ? 'Выйти' : 'Войти',
       link: '/auth/login/',
+      onClick: handleDispatchBtn,
     },
     {
       id: 2,
@@ -48,13 +97,20 @@ export const Header = () => {
         <Logo wind='w-16 h-16' />
       </Link>
       <ul className='flex items-center gap-12'>
-        {items.map(({ id, value, link }) => (
+        {resultItems.map(({ id, value, link }) => (
           <HeaderItem key={id} value={value} link={link} />
         ))}
       </ul>
       <div className='flex gap-5'>
-        {btns.map(({ id, value, link, bg, color }) => (
-          <Button key={id} value={value} link={link} bg={bg} color={color} />
+        {btns.map(({ id, value, link, bg, color, onClick }) => (
+          <Button
+            key={id}
+            value={value}
+            link={link}
+            bg={bg}
+            color={color}
+            onClick={onClick}
+          />
         ))}
       </div>
     </div>
