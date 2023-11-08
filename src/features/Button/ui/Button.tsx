@@ -7,6 +7,7 @@ type ButtonProps = {
   bg?: string
   color?: string
   onClick?: () => void
+  show?: boolean
 }
 export const Button: React.FC<ButtonProps> = ({
   value,
@@ -14,8 +15,11 @@ export const Button: React.FC<ButtonProps> = ({
   bg,
   color,
   onClick,
+  show = true,
 }) => {
   const navigation = useNavigate()
+
+  if (!show) return null
 
   const handleClick = () => {
     console.log('Button clicked')
@@ -33,6 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
         `text-2xl py-4 px-7 text-black-primary rounded-xl shadow-sm`,
         bg,
         color,
+        show,
       ].join(' ')}
     >
       {value}

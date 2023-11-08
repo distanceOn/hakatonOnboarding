@@ -82,6 +82,7 @@ export const Header = () => {
       value: auth ? 'Выйти' : 'Войти',
       link: '/auth/login/',
       onClick: handleDispatchBtn,
+      show: true,
     },
     {
       id: 2,
@@ -89,6 +90,7 @@ export const Header = () => {
       link: '/auth/register/',
       bg: 'bg-blue-primary',
       color: 'text-white-primary',
+      show: !auth,
     },
   ]
   return (
@@ -102,7 +104,7 @@ export const Header = () => {
         ))}
       </ul>
       <div className='flex gap-5'>
-        {btns.map(({ id, value, link, bg, color, onClick }) => (
+        {btns.map(({ id, value, link, bg, color, onClick, show }) => (
           <Button
             key={id}
             value={value}
@@ -110,6 +112,7 @@ export const Header = () => {
             bg={bg}
             color={color}
             onClick={onClick}
+            show={show}
           />
         ))}
       </div>
