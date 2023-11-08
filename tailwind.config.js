@@ -10,6 +10,7 @@ export default {
         'grey-primary': '#4B5563',
         'grey-secondary': '#374151',
         'grey-third': '#D1D5DB',
+        'grey-fourth': '#6B7280',
       },
     },
   },
