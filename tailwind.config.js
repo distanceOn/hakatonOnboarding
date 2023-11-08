@@ -8,6 +8,8 @@ export default {
         'black-primary': '#111827',
         'white-primary': '#ffffff',
         'grey-primary': '#4B5563',
+        'grey-secondary': '#374151',
+        'grey-third': '#D1D5DB',
       },
     },
   },
