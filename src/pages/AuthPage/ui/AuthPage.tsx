@@ -1,4 +1,4 @@
-import { MainLayout } from '@/shared/layouts/MainLayout'
+import { MainLayout } from '@/pages/layouts/MainLayout'
 import { AuthForm } from '@/widgets/AuthForm'
 
 export const AuthPage = () => (
