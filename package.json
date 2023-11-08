@@ -1,11 +1,11 @@
 {
-  "name": "dotsales-frontend",
+  "name": "hakaton-onboarding",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "author": {
-    "name": "DotSales",
-    "url": "https://gitlab.dotsales.ru/dotsales-app/dotsales-frontend"
+    "name": "distanceOn",
+    "url": "https://github.com/distanceOn/hakatonOnboarding"
   },
   "license": "UNLICENSED",
   "scripts": {
