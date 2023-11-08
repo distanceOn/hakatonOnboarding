@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import App from './app/App'
-import { Providers } from './app/providers/Providers'
+import App from './app/App.tsx'
+import { Providers } from './app/providers/Providers.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
