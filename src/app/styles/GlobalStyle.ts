@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { getColor } from './Theme'
-
 import './index.css'
 
 import { Inter } from '@/shared/lib/Inter'
@@ -16,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-	    color: ${getColor('main_text')};
+	    color: #111827;
     }
     html {
         font-size: 62.5%;

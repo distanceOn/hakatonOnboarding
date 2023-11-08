@@ -7,6 +7,7 @@ export default {
         'blue-primary': '#4F46E5',
         'black-primary': '#111827',
         'white-primary': '#ffffff',
+        'grey-primary': '#4B5563',
       },
     },
   },
