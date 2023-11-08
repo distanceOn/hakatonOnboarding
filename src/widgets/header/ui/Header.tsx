@@ -37,7 +37,7 @@ export const Header = () => {
     {
       id: 2,
       value: 'Зарегистрироваться',
-      link: '#',
+      link: '/auth/register/',
       bg: 'bg-blue-primary',
       color: 'text-white-primary',
     },

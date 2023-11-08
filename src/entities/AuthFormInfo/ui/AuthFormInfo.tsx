@@ -23,7 +23,7 @@ export const AuthFormInfo = () => {
   const { header, link, linkValue } = info[type]
 
   return (
-    <div className='flex flex-col items-center mt-20'>
+    <div className='flex flex-col items-center '>
       <Logo wind='w-20 h-20' />
       <h2 className=' text-5xl font-extrabold mt-10'>{header}</h2>
       <span className=' text-2xl text-grey-primary font-normal mt-3'>

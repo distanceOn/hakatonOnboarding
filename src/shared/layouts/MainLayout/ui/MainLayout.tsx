@@ -7,7 +7,7 @@ type MainLayoutProps = {
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => (
-  <div className='px-24'>
+  <div className='px-24 h-screen'>
     <Header />
     {children}
   </div>
