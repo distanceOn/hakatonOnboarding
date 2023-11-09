@@ -49,7 +49,8 @@
     "src/components/SearchResult/components/ResultList",
     "emotion.d.ts",
     "src/app/theme",
-    "src/app/providers"
+    "src/app/providers",
+    "src/widgets/**/index.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
