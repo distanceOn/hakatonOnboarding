@@ -10,7 +10,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
-    "build": "tsx && vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "start": "pnpm build && pnpm preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
