@@ -47,7 +47,10 @@ export const Materials = () => {
   return (
     <div className=' w-4/12'>
       <h3 className='text-5xl font-extrabold p-3'>Материалы</h3>
-      <ul className=' p-8 overflow-y-scroll flex flex-col gap-10'>
+      <ul
+        className=' p-8 overflow-y-scroll flex flex-col gap-10'
+        style={{ maxHeight: '75vh' }}
+      >
         {items.map(({ id, title, count }) => (
           <li
             className='flex cursor-pointer hover:bg-slate-200 p-2 rounded-2xl'
