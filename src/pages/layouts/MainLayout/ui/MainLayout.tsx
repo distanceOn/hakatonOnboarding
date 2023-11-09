@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-import { Header } from '@/widgets/Header'
+import { Header } from '@/widgets/Header/index.ts'
 
 type MainLayoutProps = {
   children: ReactNode
