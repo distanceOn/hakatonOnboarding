@@ -43,7 +43,7 @@ export const Header = () => {
     {
       id: 2,
       value: 'Материалы',
-      link: '#',
+      link: '/materials',
     },
     {
       id: 3,

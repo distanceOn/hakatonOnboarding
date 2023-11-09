@@ -87,7 +87,7 @@ export const Materials = () => {
       </ul>
       <Button
         value='Открыть все материалы'
-        link={'#'}
+        link={'/materials'}
         bg='bg-blue-primary'
         color='text-white-primary'
         width='w-full'
