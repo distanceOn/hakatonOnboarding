@@ -38,7 +38,7 @@ export const Header = () => {
     {
       id: 1,
       value: 'Личный кабинет',
-      link: '#',
+      link: '/',
     },
     {
       id: 2,
