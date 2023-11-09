@@ -6,7 +6,7 @@ import { AuthFormInfo } from '@/entities/AuthFormInfo'
 import { AuthInput } from '@/features/AuthInput'
 import { AuthRemember } from '@/features/AuthRemember'
 import { Button } from '@/features/Button'
-import { setAuth } from '@/shared/model/userSlice'
+import { setAuth } from '@/shared/model/UserSlice'
 
 type InputType = {
   id: number

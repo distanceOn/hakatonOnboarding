@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '@/shared/model/hooks'
 
 import { Button } from '@/features/Button'
 import { HeaderItem } from '@/features/HeaderItem/index'
-import { setAuth } from '@/shared/model/userSlice'
+import { setAuth } from '@/shared/model/UserSlice'
 import { Logo } from '@/shared/ui'
 
 export const Header = () => {
