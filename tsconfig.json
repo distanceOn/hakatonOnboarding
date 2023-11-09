@@ -1,25 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "declaration": false,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "outDir": "./dist",
     "baseUrl": ".",
-    "incremental": true,
-    "strictNullChecks": false,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"],
     },
-    "types": ["vite-plugin-svgr/client", "vite/client"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -28,29 +17,15 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": false
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/*.d.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/__test__//*.(test|spec).(ts|tsx)",
-    "*.config.ts",
-    "./src//*",
-    "./playwright//*",
-    "src/components/SearchResult/components/ResultList",
-    "emotion.d.ts",
-    "src/app/theme",
-    "src/app/providers",
-    "src/widgets/**/index.ts"
-  ],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
+
+  
 }

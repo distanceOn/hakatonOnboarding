@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react'
 
-import { Header } from '@/widgets/Header/index.ts'
+import { Header } from '@/widgets/Header'
+import type { ReactNode } from 'react'
 
 type MainLayoutProps = {
   children: ReactNode
@@ -8,7 +8,7 @@ type MainLayoutProps = {
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => (
   <div className='px-24 h-screen'>
-    <Header />
+    <Header/>
     {children}
   </div>
 )
